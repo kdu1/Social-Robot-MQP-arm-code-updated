@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src
+CMAKE_SOURCE_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build
+CMAKE_BINARY_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build
 
 # Include any dependencies generated for this target.
 include arm_code/CMakeFiles/hidapi_hidraw.dir/depend.make
@@ -58,17 +58,17 @@ include arm_code/CMakeFiles/hidapi_hidraw.dir/progress.make
 include arm_code/CMakeFiles/hidapi_hidraw.dir/flags.make
 
 arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o: arm_code/CMakeFiles/hidapi_hidraw.dir/flags.make
-arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o: /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o"
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o   -c /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c
+arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o: /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o"
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o   -c /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c
 
 arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i"
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c > CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c > CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i
 
 arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s"
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c -o CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c -o CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s
 
 # Object files for target hidapi_hidraw
 hidapi_hidraw_OBJECTS = \
@@ -77,22 +77,22 @@ hidapi_hidraw_OBJECTS = \
 # External object files for target hidapi_hidraw
 hidapi_hidraw_EXTERNAL_OBJECTS =
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/build.make
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library /home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so"
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hidapi_hidraw.dir/link.txt --verbose=$(VERBOSE)
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/build.make
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so: arm_code/CMakeFiles/hidapi_hidraw.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so"
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hidapi_hidraw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-arm_code/CMakeFiles/hidapi_hidraw.dir/build: /home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so
+arm_code/CMakeFiles/hidapi_hidraw.dir/build: /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so
 
 .PHONY : arm_code/CMakeFiles/hidapi_hidraw.dir/build
 
 arm_code/CMakeFiles/hidapi_hidraw.dir/clean:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -P CMakeFiles/hidapi_hidraw.dir/cmake_clean.cmake
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -P CMakeFiles/hidapi_hidraw.dir/cmake_clean.cmake
 .PHONY : arm_code/CMakeFiles/hidapi_hidraw.dir/clean
 
 arm_code/CMakeFiles/hidapi_hidraw.dir/depend:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code/CMakeFiles/hidapi_hidraw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code/CMakeFiles/hidapi_hidraw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm_code/CMakeFiles/hidapi_hidraw.dir/depend
 

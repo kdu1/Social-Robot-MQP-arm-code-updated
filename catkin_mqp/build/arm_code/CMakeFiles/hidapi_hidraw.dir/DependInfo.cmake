@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c" "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c" "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -18,8 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/include"
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/hidapi"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/include"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/hidapi"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

@@ -87,7 +87,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
      * @param s - SimpleComsDevice called when calling ReadFloats and initializing
      *  Calls connect method from SimpleComsDevice
     */
-    Robot::Robot(ros::NodeHandle *nh, SimpleComsDevice *s){
+    Robot::Robot(SimpleComsDevice *s){
         //SimpleComsDevice a;
         //this->a = a;
 
@@ -936,7 +936,7 @@ class Traj_Planner{
  * Starts ros, calls servo_jp and pickAndPlace to move arm
  * TODO: snap ros stuff
 */
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
     
     ros::init(argc, argv, "arm_code");
@@ -981,10 +981,10 @@ int main(int argc, char **argv)
 
     //ROS_INFO("Before spin");
 
-    ros::spinOnce();
+    /*ros::spinOnce();
 
     robot.stop();
-    ros::waitForShutdown();
+    ros::waitForShutdown();*.
     
     /*ros::Rate r(10); // 10 hz
     while (ros::ok())
@@ -999,4 +999,4 @@ int main(int argc, char **argv)
     ros::waitForShutdown();
     robot.stop();*/
     //TODO: FUTURE CASE just use ROS instead of SimplePacketComs, Hidapi
-}
+/*}*/

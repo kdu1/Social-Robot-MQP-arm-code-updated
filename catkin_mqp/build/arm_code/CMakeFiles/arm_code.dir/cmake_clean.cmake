@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/arm_code/arm_code"
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/arm_code/arm_code.pdb"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code.pdb"
   "CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.o"
+  "CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o"
   "CMakeFiles/arm_code.dir/src/Robot.cpp.o"
   "CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.o"
   "CMakeFiles/arm_code.dir/src/cubic_traj.cpp.o"

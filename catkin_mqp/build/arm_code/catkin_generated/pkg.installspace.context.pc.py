@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;rospy;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-larm_code;-lhidapi".split(';') if "-larm_code;-lhidapi" != "" else []
 PROJECT_NAME = "arm_code"
-PROJECT_SPACE_DIR = "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/install"
+PROJECT_SPACE_DIR = "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/install"
 PROJECT_VERSION = "0.0.0"

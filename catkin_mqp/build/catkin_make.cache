@@ -1,2 +1,2 @@
 arm_code
--DCATKIN_DEVEL_PREFIX=/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel -DCMAKE_INSTALL_PREFIX=/home/vboxuser/MQP-arm-code-vm/catkin_mqp/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel -DCMAKE_INSTALL_PREFIX=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/install -G Unix Makefiles

@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/hidapi/hidapi.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/hidapi/hidapi.h
 wchar.h
 -
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hid.c
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hid.c
 stdio.h
 -
 string.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/string.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/string.h
 stdlib.h
 -
 locale.h
@@ -44,5 +44,5 @@ linux/input.h
 libudev.h
 -
 hidapi.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/linux/hidapi.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/hidapi.h
 

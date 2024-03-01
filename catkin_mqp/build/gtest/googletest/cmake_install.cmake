@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/install")
+  set(CMAKE_INSTALL_PREFIX "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

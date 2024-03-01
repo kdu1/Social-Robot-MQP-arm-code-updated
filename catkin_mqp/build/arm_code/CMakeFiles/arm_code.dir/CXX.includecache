@@ -6,23 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/FloatPacketType.cpp
-vector
--
-cstring
--
-cstdint
--
-FloatPacketType.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/FloatPacketType.h
-iostream
--
-bitset
--
-climits
--
-
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/FloatPacketType.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/FloatPacketType.h
 vector
 -
 cstdint
@@ -32,7 +16,21 @@ cstring
 stdio.h
 -
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/Robot.cpp
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ROSWrapper.cpp
+ros/ros.h
+-
+Robot.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/Robot.h
+memory
+-
+iostream
+-
+std_msgs/String.h
+-
+std_srvs/Trigger.h
+-
+
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/Robot.cpp
 ros/ros.h
 -
 vector
@@ -48,13 +46,13 @@ cmath
 valarray
 -
 ik3001.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/ik3001.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ik3001.h
 cubic_traj.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/cubic_traj.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/cubic_traj.h
 Robot.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/Robot.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/Robot.h
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/Robot.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/Robot.h
 iostream
 -
 vector
@@ -68,43 +66,23 @@ hidapi/hidapi.h
 complex
 -
 rt_nonfinite.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/rt_nonfinite.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/rt_nonfinite.h
 rt_defines.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/rt_defines.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/rt_defines.h
 cmath
 -
 valarray
 -
 cubic_traj.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/cubic_traj.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/cubic_traj.h
 SimpleComsDevice.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/SimpleComsDevice.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/SimpleComsDevice.h
 ik3001.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/ik3001.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ik3001.h
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/SimpleComsDevice.cpp
-vector
--
-unordered_map
--
-SimpleComsDevice.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/SimpleComsDevice.h
-iostream
--
-memory
--
-cassert
--
-thread
--
-complex
--
-valarray
--
-
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/SimpleComsDevice.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/SimpleComsDevice.h
 FloatPacketType.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/FloatPacketType.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/FloatPacketType.h
 iostream
 -
 cassert
@@ -112,7 +90,7 @@ cassert
 hidapi/hidapi.h
 -
 libusb-1.0/libusb.h
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/libusb-1.0/libusb.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/libusb-1.0/libusb.h
 memory
 -
 thread
@@ -128,7 +106,7 @@ unistd.h
 hidapi_libusb.h
 -
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/cubic_traj.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/cubic_traj.h
 cstddef
 -
 cstdlib
@@ -142,7 +120,7 @@ complex
 valarray
 -
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/ik3001.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ik3001.h
 cstddef
 -
 cstdlib
@@ -152,9 +130,9 @@ complex
 valarray
 -
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/rt_defines.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/rt_defines.h
 
-/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/src/rt_nonfinite.h
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/rt_nonfinite.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -364,6 +342,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/noetic/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/noetic/include/ros/message_traits.h
@@ -801,6 +783,62 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
+
+/opt/ros/noetic/include/std_msgs/String.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_srvs/Trigger.h
+ros/service_traits.h
+-
+std_srvs/TriggerRequest.h
+-
+std_srvs/TriggerResponse.h
+-
+
+/opt/ros/noetic/include/std_srvs/TriggerRequest.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_srvs/TriggerResponse.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h

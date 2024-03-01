@@ -6,5 +6,5 @@ C_FLAGS = -fPIC
 
 C_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"arm_code\" -Dhidapi_hidraw_EXPORTS
 
-C_INCLUDES = -I/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/include -I/home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code/hidapi/hidapi -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+C_INCLUDES = -I/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/include -I/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/hidapi -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

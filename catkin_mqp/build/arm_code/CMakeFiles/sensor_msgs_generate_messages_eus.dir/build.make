@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src
+CMAKE_SOURCE_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build
+CMAKE_BINARY_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build
 
 # Utility rule file for sensor_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build: sensor_msgs_gen
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 
 arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src/arm_code /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
 

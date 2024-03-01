@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.pdb"
-  "/home/vboxuser/MQP-arm-code-vm/catkin_mqp/devel/lib/libhidapi_hidraw.so"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.pdb"
+  "/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so"
   "CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o"
 )
 

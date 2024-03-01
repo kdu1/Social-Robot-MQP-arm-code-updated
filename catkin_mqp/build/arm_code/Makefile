@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/src
+CMAKE_SOURCE_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build
+CMAKE_BINARY_DIR = /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/CMakeFiles /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/arm_code/CMakeFiles/progress.marks
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build/CMakeFiles 0
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code/CMakeFiles/progress.marks
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/clean
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/preinstall
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/preinstall
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ rosgraph_msgs_generate_messages_py: arm_code/CMakeFiles/rosgraph_msgs_generate_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ roscpp_generate_messages_lisp: arm_code/CMakeFiles/roscpp_generate_messages_lisp
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ geometry_msgs_generate_messages_cpp: arm_code/CMakeFiles/geometry_msgs_generate_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ geometry_msgs_generate_messages_nodejs: arm_code/CMakeFiles/geometry_msgs_genera
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ rosgraph_msgs_generate_messages_lisp: arm_code/CMakeFiles/rosgraph_msgs_generate
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ rosgraph_msgs_generate_messages_eus: arm_code/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ std_msgs_generate_messages_cpp: arm_code/CMakeFiles/std_msgs_generate_messages_c
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ roscpp_generate_messages_nodejs: arm_code/CMakeFiles/roscpp_generate_messages_no
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ std_msgs_generate_messages_eus: arm_code/CMakeFiles/std_msgs_generate_messages_e
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ geometry_msgs_generate_messages_lisp: arm_code/CMakeFiles/geometry_msgs_generate
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : arm_code/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ roscpp_generate_messages_py: arm_code/CMakeFiles/roscpp_generate_messages_py.dir
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_py.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_py.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ std_msgs_generate_messages_lisp: arm_code/CMakeFiles/std_msgs_generate_messages_
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ rosgraph_msgs_generate_messages_nodejs: arm_code/CMakeFiles/rosgraph_msgs_genera
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ roscpp_generate_messages_eus: arm_code/CMakeFiles/roscpp_generate_messages_eus.d
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ sensor_msgs_generate_messages_eus: arm_code/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ roscpp_generate_messages_cpp: arm_code/CMakeFiles/roscpp_generate_messages_cpp.d
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ sensor_msgs_generate_messages_lisp: arm_code/CMakeFiles/sensor_msgs_generate_mes
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ sensor_msgs_generate_messages_nodejs: arm_code/CMakeFiles/sensor_msgs_generate_m
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ std_msgs_generate_messages_py: arm_code/CMakeFiles/std_msgs_generate_messages_py
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ sensor_msgs_generate_messages_cpp: arm_code/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ std_msgs_generate_messages_nodejs: arm_code/CMakeFiles/std_msgs_generate_message
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arm_code/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ geometry_msgs_generate_messages_eus: arm_code/CMakeFiles/geometry_msgs_generate_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ sensor_msgs_generate_messages_py: arm_code/CMakeFiles/sensor_msgs_generate_messa
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ geometry_msgs_generate_messages_py: arm_code/CMakeFiles/geometry_msgs_generate_m
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_code/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/hidapi_hidraw.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/hidapi_hidraw.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/hidapi_hidraw.dir/rule
 .PHONY : arm_code/CMakeFiles/hidapi_hidraw.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ hidapi_hidraw: arm_code/CMakeFiles/hidapi_hidraw.dir/rule
 
 # fast build rule for target.
 hidapi_hidraw/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/build
 .PHONY : hidapi_hidraw/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/arm_code.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/arm_code.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/arm_code.dir/rule
 .PHONY : arm_code/CMakeFiles/arm_code.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ arm_code: arm_code/CMakeFiles/arm_code.dir/rule
 
 # fast build rule for target.
 arm_code/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/build
 .PHONY : arm_code/fast
 
 # Convenience name for target.
 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f CMakeFiles/Makefile2 arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -569,7 +569,7 @@ rosgraph_msgs_generate_messages_cpp: arm_code/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_code/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 hidapi/linux/hid.o: hidapi/linux/hid.c.o
@@ -578,7 +578,7 @@ hidapi/linux/hid.o: hidapi/linux/hid.c.o
 
 # target to build an object file
 hidapi/linux/hid.c.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.o
 .PHONY : hidapi/linux/hid.c.o
 
 hidapi/linux/hid.i: hidapi/linux/hid.c.i
@@ -587,7 +587,7 @@ hidapi/linux/hid.i: hidapi/linux/hid.c.i
 
 # target to preprocess a source file
 hidapi/linux/hid.c.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.i
 .PHONY : hidapi/linux/hid.c.i
 
 hidapi/linux/hid.s: hidapi/linux/hid.c.s
@@ -596,7 +596,7 @@ hidapi/linux/hid.s: hidapi/linux/hid.c.s
 
 # target to generate assembly for a file
 hidapi/linux/hid.c.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/hidapi_hidraw.dir/build.make arm_code/CMakeFiles/hidapi_hidraw.dir/hidapi/linux/hid.c.s
 .PHONY : hidapi/linux/hid.c.s
 
 src/FloatPacketType.o: src/FloatPacketType.cpp.o
@@ -605,7 +605,7 @@ src/FloatPacketType.o: src/FloatPacketType.cpp.o
 
 # target to build an object file
 src/FloatPacketType.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.o
 .PHONY : src/FloatPacketType.cpp.o
 
 src/FloatPacketType.i: src/FloatPacketType.cpp.i
@@ -614,7 +614,7 @@ src/FloatPacketType.i: src/FloatPacketType.cpp.i
 
 # target to preprocess a source file
 src/FloatPacketType.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.i
 .PHONY : src/FloatPacketType.cpp.i
 
 src/FloatPacketType.s: src/FloatPacketType.cpp.s
@@ -623,8 +623,35 @@ src/FloatPacketType.s: src/FloatPacketType.cpp.s
 
 # target to generate assembly for a file
 src/FloatPacketType.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.s
 .PHONY : src/FloatPacketType.cpp.s
+
+src/ROSWrapper.o: src/ROSWrapper.cpp.o
+
+.PHONY : src/ROSWrapper.o
+
+# target to build an object file
+src/ROSWrapper.cpp.o:
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o
+.PHONY : src/ROSWrapper.cpp.o
+
+src/ROSWrapper.i: src/ROSWrapper.cpp.i
+
+.PHONY : src/ROSWrapper.i
+
+# target to preprocess a source file
+src/ROSWrapper.cpp.i:
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.i
+.PHONY : src/ROSWrapper.cpp.i
+
+src/ROSWrapper.s: src/ROSWrapper.cpp.s
+
+.PHONY : src/ROSWrapper.s
+
+# target to generate assembly for a file
+src/ROSWrapper.cpp.s:
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.s
+.PHONY : src/ROSWrapper.cpp.s
 
 src/Robot.o: src/Robot.cpp.o
 
@@ -632,7 +659,7 @@ src/Robot.o: src/Robot.cpp.o
 
 # target to build an object file
 src/Robot.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.o
 .PHONY : src/Robot.cpp.o
 
 src/Robot.i: src/Robot.cpp.i
@@ -641,7 +668,7 @@ src/Robot.i: src/Robot.cpp.i
 
 # target to preprocess a source file
 src/Robot.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.i
 .PHONY : src/Robot.cpp.i
 
 src/Robot.s: src/Robot.cpp.s
@@ -650,7 +677,7 @@ src/Robot.s: src/Robot.cpp.s
 
 # target to generate assembly for a file
 src/Robot.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/Robot.cpp.s
 .PHONY : src/Robot.cpp.s
 
 src/SimpleComsDevice.o: src/SimpleComsDevice.cpp.o
@@ -659,7 +686,7 @@ src/SimpleComsDevice.o: src/SimpleComsDevice.cpp.o
 
 # target to build an object file
 src/SimpleComsDevice.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.o
 .PHONY : src/SimpleComsDevice.cpp.o
 
 src/SimpleComsDevice.i: src/SimpleComsDevice.cpp.i
@@ -668,7 +695,7 @@ src/SimpleComsDevice.i: src/SimpleComsDevice.cpp.i
 
 # target to preprocess a source file
 src/SimpleComsDevice.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.i
 .PHONY : src/SimpleComsDevice.cpp.i
 
 src/SimpleComsDevice.s: src/SimpleComsDevice.cpp.s
@@ -677,7 +704,7 @@ src/SimpleComsDevice.s: src/SimpleComsDevice.cpp.s
 
 # target to generate assembly for a file
 src/SimpleComsDevice.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/SimpleComsDevice.cpp.s
 .PHONY : src/SimpleComsDevice.cpp.s
 
 src/cubic_traj.o: src/cubic_traj.cpp.o
@@ -686,7 +713,7 @@ src/cubic_traj.o: src/cubic_traj.cpp.o
 
 # target to build an object file
 src/cubic_traj.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.o
 .PHONY : src/cubic_traj.cpp.o
 
 src/cubic_traj.i: src/cubic_traj.cpp.i
@@ -695,7 +722,7 @@ src/cubic_traj.i: src/cubic_traj.cpp.i
 
 # target to preprocess a source file
 src/cubic_traj.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.i
 .PHONY : src/cubic_traj.cpp.i
 
 src/cubic_traj.s: src/cubic_traj.cpp.s
@@ -704,7 +731,7 @@ src/cubic_traj.s: src/cubic_traj.cpp.s
 
 # target to generate assembly for a file
 src/cubic_traj.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.s
 .PHONY : src/cubic_traj.cpp.s
 
 src/ik3001.o: src/ik3001.cpp.o
@@ -713,7 +740,7 @@ src/ik3001.o: src/ik3001.cpp.o
 
 # target to build an object file
 src/ik3001.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.o
 .PHONY : src/ik3001.cpp.o
 
 src/ik3001.i: src/ik3001.cpp.i
@@ -722,7 +749,7 @@ src/ik3001.i: src/ik3001.cpp.i
 
 # target to preprocess a source file
 src/ik3001.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.i
 .PHONY : src/ik3001.cpp.i
 
 src/ik3001.s: src/ik3001.cpp.s
@@ -731,7 +758,7 @@ src/ik3001.s: src/ik3001.cpp.s
 
 # target to generate assembly for a file
 src/ik3001.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.s
 .PHONY : src/ik3001.cpp.s
 
 src/rt_nonfinite.o: src/rt_nonfinite.cpp.o
@@ -740,7 +767,7 @@ src/rt_nonfinite.o: src/rt_nonfinite.cpp.o
 
 # target to build an object file
 src/rt_nonfinite.cpp.o:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.o
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.o
 .PHONY : src/rt_nonfinite.cpp.o
 
 src/rt_nonfinite.i: src/rt_nonfinite.cpp.i
@@ -749,7 +776,7 @@ src/rt_nonfinite.i: src/rt_nonfinite.cpp.i
 
 # target to preprocess a source file
 src/rt_nonfinite.cpp.i:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.i
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.i
 .PHONY : src/rt_nonfinite.cpp.i
 
 src/rt_nonfinite.s: src/rt_nonfinite.cpp.s
@@ -758,7 +785,7 @@ src/rt_nonfinite.s: src/rt_nonfinite.cpp.s
 
 # target to generate assembly for a file
 src/rt_nonfinite.cpp.s:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.s
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.s
 .PHONY : src/rt_nonfinite.cpp.s
 
 # Help Target
@@ -807,6 +834,9 @@ help:
 	@echo "... src/FloatPacketType.o"
 	@echo "... src/FloatPacketType.i"
 	@echo "... src/FloatPacketType.s"
+	@echo "... src/ROSWrapper.o"
+	@echo "... src/ROSWrapper.i"
+	@echo "... src/ROSWrapper.s"
 	@echo "... src/Robot.o"
 	@echo "... src/Robot.i"
 	@echo "... src/Robot.s"
@@ -833,6 +863,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/vboxuser/MQP-arm-code-vm/catkin_mqp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

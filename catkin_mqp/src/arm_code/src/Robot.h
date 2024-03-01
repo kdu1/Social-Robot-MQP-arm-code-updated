@@ -50,7 +50,7 @@ class Robot{
         int MAX = 3;
         SimpleComsDevice* s;
 
-        Robot(ros::NodeHandle *nh, SimpleComsDevice *s);
+        Robot(SimpleComsDevice *s);
         /**
          * runs a trajectory using coefficients passed in as tc, and a total
          * runtime of t. if s is true, tc was calculated for joint space, if
