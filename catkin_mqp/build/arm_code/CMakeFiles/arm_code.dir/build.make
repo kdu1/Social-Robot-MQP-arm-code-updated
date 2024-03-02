@@ -135,18 +135,18 @@ arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_code.dir/src/ik3001.cpp.s"
 	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ik3001.cpp -o CMakeFiles/arm_code.dir/src/ik3001.cpp.s
 
-arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o: arm_code/CMakeFiles/arm_code.dir/flags.make
-arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o: /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ROSWrapper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o"
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o -c /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ROSWrapper.cpp
+arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o: arm_code/CMakeFiles/arm_code.dir/flags.make
+arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o: /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/HephaestusArm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o"
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o -c /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/HephaestusArm.cpp
 
-arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.i"
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ROSWrapper.cpp > CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.i
+arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.i"
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/HephaestusArm.cpp > CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.i
 
-arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.s"
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/ROSWrapper.cpp -o CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.s
+arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.s"
+	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build/arm_code && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/src/HephaestusArm.cpp -o CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.s
 
 # Object files for target arm_code
 arm_code_OBJECTS = \
@@ -156,7 +156,7 @@ arm_code_OBJECTS = \
 "CMakeFiles/arm_code.dir/src/cubic_traj.cpp.o" \
 "CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.o" \
 "CMakeFiles/arm_code.dir/src/ik3001.cpp.o" \
-"CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o"
+"CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o"
 
 # External object files for target arm_code
 arm_code_EXTERNAL_OBJECTS =
@@ -167,7 +167,7 @@ arm_code_EXTERNAL_OBJECTS =
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/src/cubic_traj.cpp.o
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/src/rt_nonfinite.cpp.o
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/src/ik3001.cpp.o
-/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o
+/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: arm_code/CMakeFiles/arm_code.dir/build.make
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/libhidapi_hidraw.so
 /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/arm_code/arm_code: /opt/ros/noetic/lib/libroscpp.so

@@ -40,54 +40,18 @@ struct hid_device_;
 		typedef struct hid_device_ hid_device; /**< opaque hidapi structure */
 
 
-/**
- * TODO: technically this does not account for the complex component.
-*/
-/*bool lessthancomplexreal (Complex l, const float r)
-{
-    //return l.imag() < r && l.real() < r;
-    
-    float floatval = reinterpret_cast<float(&)>(l);
-    return floatval < r * r;
-
-}*/
 
 //device:
 // Open the device using the VID, PID,
 // and optionally the Serial number.
 
 
-//defining this in SimpleComsDevice instead
-/*
-unsigned short vid = 0x16c0;
-unsigned short pid = 0x0486;
-hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
-
-/*bool validHandle(hid_device * handle){
-    if (!handle) {
-        printf("unable to open device\n");
-        hid_exit();
-        return 1;
-    }
-}*/
-
-
-//class Robot{
-   // public:
-        /*explicit Robot();
-        Robot(const Robot&) = delete;
-        Robot& operator=(const Robot&) = delete;
-        ~Robot() = default;*/
-     /*   CArray endpts = {std::complex<float>(0, 0), std::complex<float>(0,0), std::complex<float>(0,0)};
-        int MAX = 3;
-        SimpleComsDevice* s;*/
-
     /**
      * Robot constructor
      * @param s - SimpleComsDevice called when calling ReadFloats and initializing
      *  Calls connect method from SimpleComsDevice
     */
-    Robot::Robot(SimpleComsDevice *s){
+    Robot::Robot(ros::NodeHandle* nh, SimpleComsDevice *s){
         //SimpleComsDevice a;
         //this->a = a;
 
@@ -126,22 +90,17 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
             
             int jpsize = 4;
             int jvsize = 3;
-            //creates empty array to store joint position data
-            //ROS_INFO("before the initialization");
-            
-            //ROS_INFO("before measured_js");
+           
             std::vector<CArray> jd = Robot::measured_js(true, true); //returns a 2X3 array
-            //ROS_INFO("after measured_js");
+          
 
             //jd size check
             if(jd.size() < 2 || jd[0].size() < 3){
-                //ROS_INFO("jd size: %ld", jd.size());
-                //ROS_INFO("jd[0] size: %ld", jd[0].size());
                 throw std::runtime_error("Error: measured_js output is wrong size");
             }
             
             CArray jp(jpsize);
-            //TODO: will it work if jd is smaller? pretty sure it's capacity vs amount used
+           
             //jp = jd[0]; //size: 1X3 //matlab is 1 indexed!! pretty sure this is the same as jd(1, :)
 
             //put jd values in like this so that it avoids memory issues
@@ -152,7 +111,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
             CArray jv(jvsize);
             jv = jd[1]; //size: 1X3 //TODO: 2d or 3d?
             
-            std::this_thread::sleep_for(std::chrono::milliseconds(10)); //pause(10)
+            std::this_thread::sleep_for(std::chrono::milliseconds(100)); //pause(10)
             jp[3] = Complex(0); //TODO: I don't know why it's 2 dimensions here*/
 
            
@@ -186,11 +145,8 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
             std::chrono::duration<double> elapsed = end - start;
             std::cout << "Elapsed time: " << elapsed.count() << " s\n";
             double currTLoop = elapsed.count();
-            //ROS_INFO("%lf", currTLoop);
 
-            //TODO: commenting out while loop to see what one recursion is
             while (currTLoop < t) {
-                //ROS_INFO("in while");
                 
                 std::vector<CArray> detCheckGet = measured_js(true, false); //2 rows by 3 cols
 
@@ -217,8 +173,6 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
 
                 //size check jacobv, again
                 if(jacobv.size() != 6, jacobv[0].size() != 3){
-                    //ROS_INFO("jacobv size: %ld", jacobv.size());
-                    //ROS_ERROR("jacobv size: %ld", jacobv.size());
                     throw std::runtime_error("Error: jacobv wrong size");
                 }
 
@@ -231,8 +185,8 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                         fflush( stdout );
                     }
                 }
-                //jacobv = {jacobv[0], jacobv[1], jacobv[2]};
-                ////ROS_INFO("Before det");
+             
+                
                 Complex DetJv = det(jacobvtp,3);
                 //ROS_INFO("After det");
 
@@ -263,7 +217,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                         a2 = tc[4] + tc[5] * curT + tc[6] * curT * curT + tc[7] * curT * curT * curT;
                         a3 = tc[8] + tc[9] * curT + tc[10] * curT * curT + tc[11] * curT * curT * curT;
                         break;
-                    case 6:
+                    case 6: //TODO: quintic trajectory not implemented yet
                         //tc size check
                         /*if(tc.size() != 3 || tc[0].size() != 6){
                             ROS_INFO("tc size: %d", tc.size());
@@ -277,7 +231,6 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                         break;
                 }
                 
-                //the example I'm using creates the publishers under joint and task space, same format of calling servojp
                 //joint space
                 if (s == true) {
                     printf("calling servo jp in joint space\n");
@@ -292,14 +245,12 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
 
                     //can use these to have inverse kinematics with just the
                     //TODO: also seems to require there be an extra TransformStamped message be sent for the task space. Is the ik3001 enough for that? Or do we still need to do that
-                    //A = self.ik30();
                     //ROS_INFO("task space");
                     Complex angles [3] = {a1, a2, a3}; //angles to get to desired position
-                    CArray A = ik3001(angles); //TODO: just have this be a CArray
+                    CArray A = ik3001(angles);
 
                     CArray conttrans = A.apply(std::conj);
 
-                    //ROS_INFO("before servo_jp");
                     servo_jp(conttrans);
                 }
                 /*else {
@@ -329,7 +280,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                 }
 
                 //ROS_INFO("before sleep");
-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
                /*D[i][0] = jp[0];
                 D[i][1] = jp[1];
                 D[i][2] = jp[2];
@@ -425,15 +376,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
     */
     std::vector<float> Robot::read(int reportID){
         
-        //matlab has
-        //self.read(1910); 1910 is idOfCommand
-        
-        //check if connected to device correctly
-        /*if(!validHandle(handle)){
-            printf("unable to open device\n");
-            hid_exit();
-            throw ("unable to open device");
-        }*/
+       //1910 is idOfCommand
         
         return  s->readFloats(reportID);
         //data is buf
@@ -480,7 +423,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
         std::vector<Complex> packet(15); // creates an empty 15x1 array to write to the robot
         //TODO: according to the reference this is wrong - see how 0 and 1 are filled here
         packet[0] = Complex(1848); //ID
-        packet[1] = Complex(1000);//Duration of movement: TODO: HARDCODED, making it extra slow just in case
+        packet[1] = Complex(100);//Duration of movement: TODO: HARDCODED, making it extra slow just in case
         packet[2] = Complex(0.0); // Interpolation mode: 0=linear, 1=sinusoidal; bypasses interpolation
         packet[3] = array[0]; // Motor 1 target position
         packet[4] = array[1]; // Motor 2 target position
@@ -493,7 +436,6 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
             fflush( stdout );
         }
         
-        //TODO:uncomment
         write(1848, packet); // sends the desired motion command to the robot
         //set motor setpoints with time: id, mS duration of move, interpolation mode 0=linear 1=sinusoidal, motor 1 target position, motor 2 target position, motor 3 target position
         endpts = array; // sets the Robot's endpoint as the endpoint specified by the input array
@@ -535,81 +477,11 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
 
         //check size of output
         if(J.size() != 6 || J[0].size() != 3){
-            ////ROS_INFO("jd size: %ld", J.size());
-            //ROS_INFO("jd[0] size: %ld", J[0].size());
             throw std::runtime_error("Error: jacobian input is wrong size");
         }
 
         return J;
     }
-
-        
-        /**
-         * wrong
-         * calculates 6x3 manipulator Jacobian from 3x1 array of joint angles
-        */
-       /*
-        double* jacob3001(const double ja[3])
-        {
-        double J_tmp;
-        double J_tmp_tmp;
-        double b_J_tmp;
-        double b_J_tmp_tmp;
-        double c_J_tmp;
-        double c_J_tmp_tmp;
-        double d_J_tmp;
-        double d_J_tmp_tmp;
-        double e_J_tmp;
-        double e_J_tmp_tmp;
-        double f_J_tmp;
-        double g_J_tmp;
-        double h_J_tmp;
-        //  calculates 6x3 manipulator Jacobian from 3x1 array of joint
-        //  angles
-        //  hardcoded Jacobian calculation
-        J_tmp_tmp = 3.1415926535897931 * (ja[1] - std::complex<float>(90,0).0) / 180.0;
-        J_tmp = std::sin(J_tmp_tmp);
-        J_tmp_tmp = std::cos(J_tmp_tmp);
-        b_J_tmp_tmp = 3.1415926535897931 * (ja[2] + 90.0) / 180.0;
-        b_J_tmp = std::sin(b_J_tmp_tmp);
-        c_J_tmp = std::cos(b_J_tmp_tmp);
-        b_J_tmp_tmp = 3.1415926535897931 * ja[0] / 180.0;
-        c_J_tmp_tmp = std::sin(b_J_tmp_tmp);
-        b_J_tmp_tmp = std::cos(b_J_tmp_tmp);
-        d_J_tmp_tmp = 15.707963267948966 * c_J_tmp_tmp;
-        d_J_tmp = d_J_tmp_tmp * J_tmp_tmp;
-        e_J_tmp = 15.707963267948966 * c_J_tmp_tmp * J_tmp;
-        J[0] = (e_J_tmp * b_J_tmp / 9.0 - d_J_tmp * c_J_tmp / 9.0) - d_J_tmp / 9.0;
-        f_J_tmp = 15.707963267948966 * b_J_tmp_tmp;
-        e_J_tmp_tmp = f_J_tmp * J_tmp_tmp;
-        g_J_tmp = e_J_tmp_tmp * b_J_tmp;
-        f_J_tmp = f_J_tmp * c_J_tmp * J_tmp / 9.0;
-        h_J_tmp = 15.707963267948966 * b_J_tmp_tmp * J_tmp;
-        J[6] = (-h_J_tmp / 9.0 - g_J_tmp / 9.0) - f_J_tmp;
-        J[12] = -g_J_tmp / 9.0 - f_J_tmp;
-        J[1] = (e_J_tmp_tmp / 9.0 + e_J_tmp_tmp * c_J_tmp / 9.0) -
-                h_J_tmp * b_J_tmp / 9.0;
-        d_J_tmp *= b_J_tmp;
-        f_J_tmp = d_J_tmp_tmp * c_J_tmp * J_tmp / 9.0;
-        J[7] = (-e_J_tmp / 9.0 - d_J_tmp / 9.0) - f_J_tmp;
-        J[13] = -d_J_tmp / 9.0 - f_J_tmp;
-        J[2] = 0.0;
-        J_tmp = 15.707963267948966 * J_tmp * b_J_tmp / 9.0 -
-                15.707963267948966 * J_tmp_tmp * c_J_tmp / 9.0;
-        J[8] = J_tmp - 15.707963267948966 * J_tmp_tmp / 9.0;
-        J[14] = J_tmp;
-        J[3] = 0.0;
-        J[9] = -c_J_tmp_tmp;
-        J[15] = -c_J_tmp_tmp;
-        J[4] = 0.0;
-        J[10] = b_J_tmp_tmp;
-        J[16] = b_J_tmp_tmp;
-        J[5] = 1.0;
-        J[11] = 0.0;
-        J[17] = 0.0;
-
-        return J;
-        }*/
 
 
     /**
@@ -619,9 +491,6 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
     std::vector<CArray> Robot::measured_js(bool GETPOS, bool GETVEL) {
         //std::vector<std::vector<Complex>> returnArray(2, std::vector<Complex>(3, std::complex<float>(0.0, 0))); // creates a 2x3 return array
         //position
-        /*ROS_INFO("measured_js");
-        ROS_INFO("GETPOS, %d\n", GETPOS);
-        ROS_INFO("GETVEL, %d\n", GETVEL);*/
 
         /**
          * This function returns a pointer to a linked list of type
@@ -655,9 +524,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                 //retPos = retPosnew;
             }
             catch(const std::exception& e){
-                //ROS_INFO(e);
-                //ROS_ERROR("error");
-                //TODO
+                std::runtime_error(e.what());
             }
             
         }
@@ -668,9 +535,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
         std::vector<float> velPacket = read(velPacketReportID); //get velocity data: motor 1 velocity mode setpoint, motor 1 velocity, motor 1 computed effort
                                                     //motor 2 velocity mode setpoint, motor 2 velocity, motor 2 computed effort
                                                     //motor 3 velocity mode setpoint, motor 3 velocity, motor 3 computed effort
-        //std::vector<float> velPacket = {0, 0, 0, 0, 0, 0, 0, 0, 0};
         if (GETVEL) { // if GETVEL is true
-            //ROS_INFO("getvel");
             try{
             //if(velPacket.size() >= ) {
                 retVel[0] = Complex((float)velPacket[2]); // gets the velocity of the first motor
@@ -683,64 +548,19 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
                 //ROS_INFO("retVel.size: row %d col %d", retVel.size(), retVel[0].size());
             }
             catch(const std::exception& e){
-                //ROS_ERROR("error");
+                std::runtime_error(e.what());
             }
         }
 
-        //ROS_INFO("ret");
+       
         std::vector<CArray> ret = {retPos, retVel}; //the output of this is an vector of CArrays
 
         //check that return size is correct
         if(ret.size() < 2 || ret[0].size() < 3 || ret[1].size() < 3){
-            //ROS_INFO("ret size: %ld", ret.size());
-            //ROS_INFO("retPos size: %ld", ret[0].size());
-            //ROS_INFO("retVel size: %ld", ret[1].size());
             throw std::runtime_error("Error: measured_js output is wrong size");
         }
         return ret; // returns the array of position and velocity values
     }
-
-    /**
-     * returns the determinant
-    */
-    /*Complex det(std::vector<std::vector<Complex>> input) {
-        ROS_INFO("det");
-        int n = input[0].size(); //TODO: not sure if always square
-        ROS_INFO("n %d", n);
-        
-        Complex d= std::complex<float>(0,0);
-        int p, h, k, i, j;
-        std::vector<std::vector<Complex>> temp(n-1, std::vector<Complex>(n));//TODO: what's it trying to do here
-
-        if(n==1) {
-            return input[0][0]; 
-        } else if(n==2) {
-            d=(input[0][0]*input[1][1]-input[0][1]*input[1][0]);
-            return d;
-        } else {
-            ROS_INFO("case 3 or more");
-            for(p=0;p<n;p++) {
-                h = 0;
-                k = 0;
-                for(i=1;i<n;i++) {
-                    for( j=0;j<n;j++) {
-                        if(j==p) {
-                            continue;
-                        }
-                        temp[h][k] = input[i][j];
-                        k++;
-                        if(k==n-1) {
-                            h++;
-                            k = 0;
-                        }
-                    }
-                }
-                d=d+input[0][p]*std::complex<float>(pow(-1,p),0)*det(temp);
-            }
-            ROS_INFO("after recursion");
-            return d;
-        }
-    }*/
 
 
     /**
@@ -856,7 +676,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
         //ROS_INFO("After cubic_traj");
 
         //may not need to return anything
-        //std::vector<std::vector<Complex>> D1 = run_trajectory(false, aset, traj_time);
+        //std::vector<std::vector<Complex>> D1 = (false, aset, traj_time);
         run_trajectory(true, aset, traj_time);
         //ROS_INFO("after run_trajectory 1");
 
@@ -869,7 +689,7 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
         run_trajectory(true, aset2, traj_time);
         //ROS_INFO("after run_trajectory 2");
         //closeGripper(); //TODO: not using gripper so I'm guessing can comment it out
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::seconds(10));
 
         vi = {0, 0, 0};
         vf = {0, 0, 0};
@@ -897,106 +717,46 @@ hid_device * handle = hid_open(vid, pid, NULL); //from hid.c*/
         s->disconnectDeviceImp();
     }
 
-//};
-
-/*
-class Traj_Planner{
-    public:
-        Robot robot;
-
-        Traj_Planner(Robot robot){
-            robot = robot;
-        }
-};
-*/
 
 
-/**
- * Calls the procedure for moving the arm
-*/
-/*int mainArmCall(){
-    //do the hw5 stuff here
-
-    std::vector<std::vector<int>> cRed(3, std::vector<int>(3, 0));
-    std::vector<int> desPos = cRed[0];
-    SimpleComsDevice a;
-    Robot robot(a);
-    int x = desPos[0];
-    int y = desPos[1];
-    int z = desPos[2];
-    robot.servo_jp({std::complex<float>(0), std::complex<float>(0), std::complex<float>(0)});
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    robot.pickAndPlace(x, y, z, 1);
-    
-    return 0;
-};*/
 
 /**
  * main ROS function
  * Starts ros, calls servo_jp and pickAndPlace to move arm
  * TODO: snap ros stuff
 */
-/*int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     
     ros::init(argc, argv, "arm_code");
     ros::NodeHandle nh;
-
-    //ros::AsyncSpinner spinner(4);
-    //spinner.start();
-
-    //ROS_INFO("Before the cRed stuff");in
     
-    //do the hw5 stuff here
-    //no idea if it works like this
     printf("in main\n");
     fflush( stdout );
     std::vector<std::vector<float>> cRed(3, std::vector<float>(3, 0));
-    //std::vector<float> desPos = cRed[0]; //why did I do that
     const char* path = "/dev/hidraw1";
     SimpleComsDevice s;
     //init robot
     Robot robot(&nh, &s);
     //Robot robot(&s);
-    //ROS_INFO("ROS robot is now started...");
+    ROS_INFO("ROS robot is now started...");
 
     //move arm
     
-    CArray in = {std::complex<float>(1,0), std::complex<float>(1,0), std::complex<float>(1,0)};
+    CArray in = {std::complex<float>(0,0), std::complex<float>(0,0), std::complex<float>(0,0)};
     robot.servo_jp(in);
+    sleep(10);
     printf("servo_jp done\n");
     //robot.pickAndPlace(0, 0, 0, 0);
+    //printf("pickAndPlace done\n");
     //fflush( stdout );
     //robot.stop();
 
-    //Home position
-    /*float x = 0;//desPos[0];
-    float y = 1;//desPos[1];
-    float z = 0;//desPos[2];*/
-    //std::this_thread::sleep_for(std::chrono::seconds(1));
-    /*robot.pickAndPlace(x, y, z, (float)1.0); //test simple servo jp before doing this
-    printf("pickAndPlace done\n");
-    fflush( stdout );*/
 
+    ROS_INFO("Before spin");
 
-    //ROS_INFO("Before spin");
+    ros::spinOnce();
 
-    /*ros::spinOnce();
-
-    robot.stop();
-    ros::waitForShutdown();*.
-    
-    /*ros::Rate r(10); // 10 hz
-    while (ros::ok())
-    {
-       ros::spinOnce();
-       r.sleep();
-    }
-
-    
-    robot.scddisconnect();
-    ROS_INFO("After disconnect");
-    ros::waitForShutdown();
-    robot.stop();*/
-    //TODO: FUTURE CASE just use ROS instead of SimplePacketComs, Hidapi
-/*}*/
+    //robot.stop();//won't need to call this
+    ros::waitForShutdown();//cntrl+c to end
+}

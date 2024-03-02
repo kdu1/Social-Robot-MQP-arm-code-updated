@@ -3,14 +3,9 @@
 //#include "PacketType.h"
 //#include <ros/ros.h>
 #include "FloatPacketType.h"
-//#include "Thread.h"
-//#include "Runnable.h" //circular
 
 #include <iostream>
 #include <cassert>
-//#include <windows.h>
-//#include <process.h>
-//#include <hidapi.h>
 #include <hidapi/hidapi.h>
 //#include <libusb.h>
 #include "libusb-1.0/libusb.h"
@@ -21,6 +16,8 @@
 #include <thread>
 #include <complex>
 #include <valarray>
+#include <unistd.h>
+#include <cstdlib>
 
 #define _USE_MATH_DEFINES
 # define M_PI           3.14159265358979323846  /* pi */
@@ -47,29 +44,10 @@
 #if defined(USING_HIDAPI_LIBUSB) && HID_API_VERSION >= HID_API_MAKE_VERSION(0, 12, 0)
 #include <hidapi_libusb.h>
 #endif
-//
 
-//also in hid.c
-//struct hid_device_;
-//typedef struct hid_device_ hid_device; /**< opaque hidapi structure */
 
 typedef std::complex<float> Complex;
 typedef std::valarray<Complex> CArray;
-    
-// bool virtualv;
-
-//String name = "SimpleComsDevice";
-
-// int readTimeout = 100;
-
-// bool isTimedOut = false;
-
-//definitions
-// bool connected;
-
-//HIDPacketComs extends this, which calls read + write, which calls hidDevice.read+write, 
-//which calls HidApi.read + write
-//which calls hid_api.read + write
 
 
 
@@ -82,8 +60,7 @@ class SimpleComsDevice {
         //unsigned short pid = 0x0486;
         //wchar_t serial[1024];
         //std::wcsncpy(serial, L"6E5B9DF04652375320202051413808FF", 1024); //TODO: error with this
-
-        //hid_device * handle = hid_open(vid, pid, NULL); //from hid.c
+        //serial not necessarily needed to open device
 
         //Alternatively:open by path
         const char* path; //= "/dev/hidraw1";
@@ -94,44 +71,6 @@ class SimpleComsDevice {
         bool virtualv = false;
         int readTimeout = 1000;
         bool isTimedOut = false;
-    
-    // A Functor
-    /*struct Runnable
-    
-        Runnable() {  }
-    
-        // This operator overloading enables calling
-        // operator function () on objects of increment
-        //how do I get the a
-        int operator () (SimpleComsDevice s) const {
-            while (s.getConnected()) {
-                try {
-                    std::vector<FloatPacketType> pollingQueue = s.getPollingQueue();
-                    for (int i = 0; i < pollingQueue.size(); i++) {
-                        FloatPacketType pollingPacket = pollingQueue[i];
-                        if (pollingPacket.sendOk()){
-                            s.process(pollingPacket); //?
-                        }
-                    } 
-                } catch (const std::exception& e) {
-                    printf("connect thread exception: ");
-                    std::cerr << e.what();
-                } 
-                try {
-                    std::this_thread::sleep_for(std::chrono::milliseconds(10));
-                } catch (const std::exception& e1) {
-                    printf("connect thread sleep exception: ");
-                    std::cerr << e1.what();
-                    s.setConnected(false);
-                } 
-            } 
-            
-            s.disconnectDeviceImp();
-            printf("SimplePacketComs disconnect");
-            return 0;
-        };
-
-    };*/
 
 
     /**
@@ -155,7 +94,10 @@ class SimpleComsDevice {
     
     
     
-    
+    /**
+    * add pollingPacket to pollingQueue
+    * @param packet FloatPacketType packet to be process()ed
+    */
     void addPollingPacket(FloatPacketType packet) {
         printf("addPollingPacket\n");
         printf("packet idOfCommand: %d\n", packet.idOfCommand);
@@ -186,6 +128,7 @@ class SimpleComsDevice {
 
     /**
      * set hid_device* handle
+     * @param handle hid_device * handle to be set to
     */
     void setHandle(hid_device * handle){
         //ROS_INFO("sethandle");
@@ -206,6 +149,8 @@ class SimpleComsDevice {
     /**
      * given id
      * return FloatPacketType pointer corresponding to it
+     * @param id of certain packet
+     * @return FloatPacketType* retrieved at id
     */
      FloatPacketType* getPacket(int ID) ;
     
@@ -222,37 +167,21 @@ class SimpleComsDevice {
         ((ArrayList<Runnable>)this.events.get(id)).add(event);
     }
     
-    public ArrayList<int> getIDs() {
-        ArrayList<int> ids = new ArrayList<>();
-        for (int j = 0; j < this.pollingQueue.size(); j++) {
-        FloatPacketType pt = this.pollingQueue[j];
-        ids.add(int.valueOf(pt.idOfCommand));
-        } 
-        return ids;
-    }*/
+   */
     
-    /**
-     * write input from robot.cpp
-     * why are there so many of them what
-    */
-   //allocate array of complexes that is an array of floats that is twice the length
-    //void writeFloats(int id, std::vector<Complex> values);
-    
-    
+   
      void writeFloats(int id, std::vector<Complex> values) ;
     
      void writeFloats(int id, std::vector<Complex> values, bool polling) ;
     
     
      std::vector<float> readFloats(int id) ;
-    
-    //void readFloats(int id, std::vector<double> values) ;
-    
 
     /**
-     * TODO: not sure if this is correct for getting the id from the bytebuffer thing
+     * Gets the id from byte vector
+     * @param bytes byte vector
     */
-     int getId(std::vector<unsigned char> bytes);
+     float getId(std::vector<unsigned char> bytes);
     
     /**
      * actually calls write
@@ -282,10 +211,6 @@ class SimpleComsDevice {
     }*/
     
      bool getIsTimedOut();
-    
-    //int read(byte[] paramArrayOfbyte, int paramInt);
-    
-    //int write(byte[] paramArrayOfbyte, int paramInt1, int paramInt2);
     
      bool disconnectDeviceImp();
     
@@ -340,6 +265,9 @@ class SimpleComsDevice {
 
 };
 
+/**
+* implementation of Java Runnable
+*/
  // A Functor
 class Runnable
 {   private:
@@ -349,7 +277,6 @@ class Runnable
 
         // This operator overloading enables calling
         // operator function () on objects of increment
-        //how do I get the a
         int operator () (SimpleComsDevice s) const {
             while (s.getConnected()) {
                 try {

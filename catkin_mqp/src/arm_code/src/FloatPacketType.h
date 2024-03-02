@@ -46,7 +46,7 @@ class FloatPacketType{
 
     std::vector<unsigned char> command(int idOfCommand, std::vector<float> values);
 
-    static int getId(std::vector<unsigned char>);
+    static float getId(std::vector<unsigned char>);
 
     bool sendOk(); 
 
@@ -64,5 +64,13 @@ class FloatPacketType{
      * floatToIntBits
     */
     static unsigned float_to_bits(float x);
+
+    /**
+     * set oneshotmode
+    */
+    void setOneShotMode() {
+        oneShotMode = true;
+        oneShotDone = false;
+    }
 
 };

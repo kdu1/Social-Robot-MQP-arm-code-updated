@@ -73,12 +73,14 @@ FloatPacketType::FloatPacketType(int id, int size) {
  * TODO: test
 */
 std::vector<float> FloatPacketType::parse(std::vector<unsigned char> bytes) {
-    //std::vector<float> returnValues;
+    //std::vector<float> returnValues(15);
+    //memcpy(&returnValues, &bytes.data(), sizeof(unsigned char * 15)); 
     //memcpy(returnValues.data(), bytes.data(), sizeof(float) * bytes.size());    // receive data
     for (int i = 0; i < numValues; i++) {
         int baseIndex = 4 * i + 4;
         int bits = toInt(bytes[0 + baseIndex]) | toInt(bytes[1 + baseIndex]) << 8 | toInt(bytes[2 + baseIndex]) << 16 | toInt(bytes[3 + baseIndex]) << 24;
         returnValues[i] = (float) (intBitsToFloat(bits));
+        //printf("returnValues[%d]: %f\n", i, returnValues[i]);
     }
     return returnValues;
 }
@@ -128,7 +130,7 @@ std::vector<unsigned char> FloatPacketType::command(int idOfCommand, std::vector
     printf("message size: %d\n", (int)(FloatPacketType::message).size());
     fflush( stdout );
 
-    printf("first value of values: %f\n", values[0]);
+    printf("first value of values: %f\n", values[values.size()-1]);
 
     //convert float vector to unsigned char vector
     memcpy(FloatPacketType::message.data(), values.data(), values.size());
@@ -170,21 +172,34 @@ std::vector<unsigned char> FloatPacketType::command(int idOfCommand, std::vector
 }
 
 /**
- * TODO: not sure if this is correct for getting the id from the bytebuffer thing
+ * converts first 4 bytes into id
 */
-int FloatPacketType::getId(std::vector<unsigned char> bytes) {
-    //ByteBuffer 
-    /*unsigned char* bAry = calloc(1024,1); //remember to free
+float FloatPacketType::getId(std::vector<unsigned char> bytes) {
+    unsigned char data[4];
 
-    memcpy(bAry, &length, sizeof(int));    
-    memcpy(bAry + sizeof(int), fAry, length*(sizeof(float)));*/
 
-    //looks fancy but I'm guessing I can just do bytes[0]
+    //get 1st 4 bytes
+    for(int i = 0; i < 4; i++){
+        data[i] = bytes[i];
+    }
+    
     //return ByteBuffer.wrap(bytes).order(be).getInt(0); //ByteBuffer given array bytes, 
         //with byte order little endian
         //returns int from buffer's current position
-    
-    return bytes[0]; //I'm gonna seethe and cope if it turns out it's not in little endian or something
+    //get first four bytes
+    //https://stackoverflow.com/questions/34943835/convert-four-bytes-to-integer-using-c
+    /*int id = int((bytes[0]) << 24 |
+                (bytes[1]) << 16 |
+                (bytes[2]) << 8 |
+                (bytes[3]));*/
+    float id;
+
+    //https://stackoverflow.com/questions/21005845/how-to-get-float-in-bytes
+
+    memcpy(&id, &data, sizeof(id));     
+    //printf("getId, %f\n", id);
+    //fflush(stdout);
+    return id; //little endian reminder
 }
 
 

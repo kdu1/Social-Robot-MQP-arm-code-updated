@@ -17,6 +17,10 @@
 #include <valarray>
 #include "cubic_traj.h"
 #include "SimpleComsDevice.h"
+
+
+#include <unistd.h>
+#include <cstdlib>
 typedef std::complex<float> Complex;
 typedef std::valarray<Complex> CArray;
 
@@ -50,7 +54,11 @@ class Robot{
         int MAX = 3;
         SimpleComsDevice* s;
 
-        Robot(SimpleComsDevice *s);
+        /**
+         * Constructor
+         * takes in a SimpleComsDevice object
+        */
+        Robot(ros::NodeHandle* nh, SimpleComsDevice *s);
         /**
          * runs a trajectory using coefficients passed in as tc, and a total
          * runtime of t. if s is true, tc was calculated for joint space, if

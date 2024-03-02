@@ -23,14 +23,14 @@
 //typedef std::valarray<Complex> CArray;
 
 
-
-// Function Declarations
-//static float rt_powd_snf(float u0, float u1);
-
 // Function Definitions
+/**
+* takes power of first input float to 2nd input float
+* @param u0, u1 float and the power to take it to
+* @return u0 ^ u1
+*/
 static float rt_powd_snf(float u0, float u1)
 {
-  //ROS_INFO("rt_powd_snf");
   float y;
   if (std::isnan(u0) || std::isnan(u1)) {
     y = rtNaN;
@@ -39,6 +39,7 @@ static float rt_powd_snf(float u0, float u1)
     float d1;
     d = std::abs(u0);
     d1 = std::abs(u1);
+    //u1 infinite
     if (std::isinf(u1)) {
       if (d == 1.0) {
         y = 1.0;
@@ -53,21 +54,33 @@ static float rt_powd_snf(float u0, float u1)
       } else {
         y = rtInf;
       }
-    } else if (d1 == 0.0) {
+    } 
+    //absolute value u1 is 0
+    else if (d1 == 0.0) {
       y = 1.0;
-    } else if (d1 == 1.0) {
+    } 
+    //absolute value u1 is 1
+    else if (d1 == 1.0) {
       if (u1 > 0.0) {
         y = u0;
       } else {
         y = 1.0 / u0;
       }
-    } else if (u1 == 2.0) {
+    } 
+    //u1 is 2, square
+    else if (u1 == 2.0) {
       y = u0 * u0;
-    } else if ((u1 == 0.5) && (u0 >= 0.0)) {
+    } 
+    //rational power
+    else if ((u1 == 0.5) && (u0 >= 0.0)) {
       y = std::sqrt(u0);
-    } else if ((u0 < 0.0) && (u1 > std::floor(u1))) {
+    } 
+    //NaN case
+    else if ((u0 < 0.0) && (u1 > std::floor(u1))) {
       y = rtNaN;
-    } else {
+    } 
+    //take the power normally
+    else {
       y = std::pow(u0, u1);
     }
   }
@@ -85,26 +98,12 @@ static float rt_powd_snf(float u0, float u1)
 
 CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::vector<float> pi, std::vector<float> pf)
 {
-  //ROS_INFO("cubic_traj");
-  //ROS_INFO("pf[0]: %f", pf[0]);
-  //ROS_INFO("pf[1]: %f", pf[1]);
-  //ROS_INFO("pf[2]: %f", pf[2]);
 
   //input size check
   if(vi.size() != 3 || vf.size() != 3 || pi.size() != 3 || pf.size() != 3){
-      //ROS_ERROR("Error: cubic_traj input is wrong size");
       throw std::runtime_error("Error: cubic_traj input is wrong size");
       
   }
-
-  //trying to see what's in the input vectors
-  //ROS_INFO("tf: %f", tf);
-  /*for(int i = 0; i < 3; i++){
-    ROS_INFO("vi[%d]: %f", i, vi[i]);
-    ROS_INFO("vf[%d]: %f", i, vf[i]);
-    ROS_INFO("pi[%d]: %f", i, pi[i]);
-    ROS_INFO("pf[%d]: %f", i, pf[i]);
-  }*/
 
   CArray CTcomplex;
   int CTcomplexsize = 12;
@@ -132,15 +131,13 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
   smax = tf * tf;
   A[10] = smax;
   A[14] = rt_powd_snf(tf, 3.0);
-  //ROS_INFO("After rt_powd_snf");
+  
   A[3] = 0.0;
   A[7] = 1.0;
   A[11] = 2.0 * tf;
   A[15] = 3.0 * smax;
-  //ROS_INFO("before CT");
-  //ROS_INFO("size of pi:%d", pi.size());
+ 
   //fill ct with all the values in the correct order
-  //ROS_INFO("%f", pi[0]);
   CT.push_back(pi[0]);
   CT.push_back(vi[0]);
   CT.push_back(pf[0]);
@@ -154,16 +151,11 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
   CT.push_back(pf[2]);
   CT.push_back(vf[2]);
 
-  for(int i= 0; i < CT.size(); i++){
-      //ROS_INFO("Initial CT at %d: %f", i, CT[i]);
-  }
-  
-  //ROS_INFO("before ipiv");
   ipiv[0] = 1;
   ipiv[1] = 2;
   ipiv[2] = 3;
   ipiv[3] = 4;
-  //ROS_INFO("before for loop");
+  
   for (int j = 0; j < 3; j++) {
     //ROS_INFO("j = %d", j);
     int b_tmp;
@@ -185,7 +177,7 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
         smax = s;
       }
     }
-    //ROS_INFO("A[%d]", b_tmp + jBcol);
+   
     if (A[b_tmp + jBcol] != 0.0) {
       if (jBcol != 0) {
         jA = j + jBcol;
@@ -205,8 +197,6 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
       }
       i = (b_tmp - j) + 4;
       for (int b_i{jp1j}; b_i <= i; b_i++) {
-        //ROS_INFO("A[%d]", b_i - 1);
-        //ROS_INFO("A[%d]", b_tmp);
         A[b_i - 1] /= A[b_tmp];
       }
     }
@@ -218,8 +208,6 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
         i = jA + 6;
         i1 = (jA - j) + 8;
         for (jp1j = i; jp1j <= i1; jp1j++) {
-          //ROS_INFO("A[%d]", jp1j - 1);
-          //ROS_INFO("A[%d]", ((b_tmp + jp1j) - jA) - 5);
           A[jp1j - 1] += A[((b_tmp + jp1j) - jA) - 5] * -smax;
         }
       }
@@ -239,7 +227,6 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
       CT[i2 + 7] = smax;
     }
   }
-  //ROS_INFO("before next for loop");
   for (int j = 0; j < 3; j++) {
     jBcol = j << 2;
     for (int k{0}; k < 4; k++) {
@@ -249,14 +236,11 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
         i1 = k + 2;
         for (int b_i{i1}; b_i < 5; b_i++) {
           jp1j = (b_i + jBcol) - 1;
-          //ROS_INFO("jp1j CT[%d]", (b_i + jBcol) - 1);
-          //ROS_INFO("A[%d]", (b_i + jA) - 1);
           CT[jp1j] -= CT[i] * A[(b_i + jA) - 1];
         }
       }
     }
   }
-  //ROS_INFO("why are there like 10 for loops");
   for (int j{0}; j < 3; j++) {
     jBcol = j << 2;
     for (int k{3}; k >= 0; k--) {
@@ -267,8 +251,6 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
         CT[i] = smax / A[k + jA];
         for (int b_i{0}; b_i < k; b_i++) {
           jp1j = b_i + jBcol;
-          //ROS_INFO("jp1j CT[%d]", (b_i + jBcol));
-          //ROS_INFO("A[%d]", b_i + jA);
           CT[jp1j] -= CT[i] * A[b_i + jA];
         }
       }
@@ -276,31 +258,14 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
   }
 
  
-  //ROS_INFO("before convert to complex for loop");
   //convert to complex
-  //ROS_INFO("CT SIZE: %d", CT.size());
-  //ROS_INFO("CTcomplex size: %d", CTcomplex.size()); 
   for(int i= 0; i < CT.size(); i++){
       //ROS_INFO("CT at %d: %f", i, CT[i]);
       CTcomplex[i] = Complex(CT[i]);
-      //CTcomplex[i] = Complex(*(CT.begin()), 0);//using get first and erase method instead
-      //CT.erase(CT.begin());
   }
-
-  //CArray ret[][3];
-   //believe what I need to do is convert a 1x12 array to a 4x3 one.
-  /*for(int i = 0, j = 0; j < CTcomplex.size(); j++)
-    ret[i][j%3] = CTcomplex[j];
-    //end of column, start new row
-    if(j%3 = 0){
-      i++;
-    }
-  }*/
 
   //output size check
   if(CTcomplex.size() != 12){
-      //ROS_INFO("CTcomplex size: %d", CTcomplex.size());
-      //ROS_ERROR("Error: cubic_traj output is wrong size");
       throw std::runtime_error("Error: cubic_traj output is wrong size");
   }
   return CTcomplex;
@@ -308,7 +273,7 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
 
 
 //attempt at using the eigen vector below
-//don't really know what's going on with b being a 4X3 vector, solve will only work with a 4X1 vector I believe. But it also has to return a 4X3 vector in the end.
+//confused about b being a 4X3 vector, solve will only work with a 4X1 vector. But it also has to return a 4X3 vector in the end.
 /**
  * @param tf, vi, vf, pi, pf 
  * traj_time, velocity parameters and position parameters
@@ -322,7 +287,7 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
          0, 1, 0, 0,
          1, tf, tf*tf, tf*tf*tf,
          0, 1, 2*tf, 3*tf*tf;
-   //TODO: literally just filling the extra column with 0 for now, I think this could work?      
+   //TODO: filling the extra column with 0 for now, I think this could work?      
     Eigen::Matrix<float, 4, 3>;
     b << pi[0], pi[1], pi[2],  //technically this doesn't make sense, means that there are variables on both sides. Could this be simplified by making it so one side is equal to 0?
          vi[0], vi[1], vi[2],
@@ -345,6 +310,7 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
 */
 /*
 CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::vector<float> pi, std::vector<float> pf){
+	//convert eigenvector to vector
     Eigen::Vector4d mat = cubic_traj_eigen(tf, vi, vf, pi, pf);
     std::vector<float> vec(mat.data(), mat.data() + mat.rows() * mat.cols());
 
