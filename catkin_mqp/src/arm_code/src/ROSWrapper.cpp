@@ -7,7 +7,6 @@
 #include <std_msgs/String.h>
 #include <std_srvs/Trigger.h>
 
-#include 
 
 //define Complex and Carray
 typedef std::complex<float> Complex;
@@ -59,6 +58,7 @@ public:
         //call pose based off of message from shown_personality
         if(mood.data.compare("smirk") == 0){
             //call the "smirk" pose
+            ROS_INFO("Smirk\n");
             smirk();
         }
         else if(mood.data.compare("smile") == 0){

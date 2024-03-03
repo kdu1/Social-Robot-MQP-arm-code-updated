@@ -559,7 +559,7 @@ void setName(String name) {
 }
 
 /**
- * TODO: why isn't this implemented
+ * TODO: need to implement, essentially managing multiple hid devices
 */
 bool SimpleComsDevice::connectDeviceImp(){
     return true;

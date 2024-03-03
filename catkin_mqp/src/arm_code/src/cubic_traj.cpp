@@ -19,10 +19,6 @@
 //#include <unsupported/Eigen/FFT>
 
 
-//typedef std::complex<float> Complex;
-//typedef std::valarray<Complex> CArray;
-
-
 // Function Definitions
 /**
 * takes power of first input float to 2nd input float
@@ -157,7 +153,6 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
   ipiv[3] = 4;
   
   for (int j = 0; j < 3; j++) {
-    //ROS_INFO("j = %d", j);
     int b_tmp;
     int mmj_tmp;
     signed char i2;
@@ -166,11 +161,9 @@ CArray cubic_traj(float tf, std::vector<float> vi, std::vector<float> vf, std::v
     jp1j = b_tmp + 2;
     jA = 4 - j;
     jBcol = 0;
-    //ROS_INFO("A[%d]", b_tmp);
     smax = std::abs(A[b_tmp]);
     for (int k{2}; k <= jA; k++) {
       float s;
-      //ROS_INFO("A[%d]", (b_tmp + k) - 1);
       s = std::abs(A[(b_tmp + k) - 1]);
       if (s > smax) {
         jBcol = k - 1;
