@@ -38,8 +38,11 @@ Clone hidapi repository under src/arm_code. Using hidapi hidraw, as apposed to h
 - add hidapi_hidraw or whatever you named the library to target_link_libraries
 - also add udev to target_link_libraries
 
-### udev rules:
-- if testing on computer, need to edit udev rules to grant permission to access device through hid. Create a new .rules file under the /etc/udev/rules.d directory. Inside, put:
+### Unable to open device; udev rules:
+- if testing on computer, need to edit udev rules to grant permission to access device through hid. 
+- follow instructions here: https://github.com/RBE300X-Lab/RBE3001_info/blob/main/troubleshooting.md
+
+- Can also try this: Create a new .rules file under the /etc/udev/rules.d directory. Inside, put:
 - KERNEL=="hidraw*", ATTRS{busnum}=="1", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0486", MODE="0666"
 - where idVendor and idProduct are the vid and pid
 
