@@ -374,7 +374,7 @@ RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=Ubuntu202
+SITE:STRING=Ubuntu20
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE

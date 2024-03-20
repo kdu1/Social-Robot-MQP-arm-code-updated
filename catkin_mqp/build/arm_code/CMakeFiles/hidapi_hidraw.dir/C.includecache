@@ -14,7 +14,7 @@ wchar.h
 stdio.h
 -
 string.h
-/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src/arm_code/hidapi/linux/string.h
+-
 stdlib.h
 -
 locale.h

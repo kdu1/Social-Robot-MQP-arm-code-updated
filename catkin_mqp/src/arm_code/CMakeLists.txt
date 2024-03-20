@@ -147,8 +147,8 @@ add_executable(arm_code src/Robot.cpp
        src/cubic_traj.cpp
        src/rt_nonfinite.cpp
        src/ik3001.cpp
-       src/HephaestusArm.cpp
-       src/ROSWrapper.cpp
+       #src/HephaestusArm.cpp
+       #src/ROSWrapper.cpp
        )
 
 ## Rename C++ executable without prefix

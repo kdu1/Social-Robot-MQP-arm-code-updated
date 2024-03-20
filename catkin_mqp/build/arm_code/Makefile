@@ -626,60 +626,6 @@ src/FloatPacketType.cpp.s:
 	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/FloatPacketType.cpp.s
 .PHONY : src/FloatPacketType.cpp.s
 
-src/HephaestusArm.o: src/HephaestusArm.cpp.o
-
-.PHONY : src/HephaestusArm.o
-
-# target to build an object file
-src/HephaestusArm.cpp.o:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.o
-.PHONY : src/HephaestusArm.cpp.o
-
-src/HephaestusArm.i: src/HephaestusArm.cpp.i
-
-.PHONY : src/HephaestusArm.i
-
-# target to preprocess a source file
-src/HephaestusArm.cpp.i:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.i
-.PHONY : src/HephaestusArm.cpp.i
-
-src/HephaestusArm.s: src/HephaestusArm.cpp.s
-
-.PHONY : src/HephaestusArm.s
-
-# target to generate assembly for a file
-src/HephaestusArm.cpp.s:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/HephaestusArm.cpp.s
-.PHONY : src/HephaestusArm.cpp.s
-
-src/ROSWrapper.o: src/ROSWrapper.cpp.o
-
-.PHONY : src/ROSWrapper.o
-
-# target to build an object file
-src/ROSWrapper.cpp.o:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.o
-.PHONY : src/ROSWrapper.cpp.o
-
-src/ROSWrapper.i: src/ROSWrapper.cpp.i
-
-.PHONY : src/ROSWrapper.i
-
-# target to preprocess a source file
-src/ROSWrapper.cpp.i:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.i
-.PHONY : src/ROSWrapper.cpp.i
-
-src/ROSWrapper.s: src/ROSWrapper.cpp.s
-
-.PHONY : src/ROSWrapper.s
-
-# target to generate assembly for a file
-src/ROSWrapper.cpp.s:
-	cd /home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build && $(MAKE) -f arm_code/CMakeFiles/arm_code.dir/build.make arm_code/CMakeFiles/arm_code.dir/src/ROSWrapper.cpp.s
-.PHONY : src/ROSWrapper.cpp.s
-
 src/Robot.o: src/Robot.cpp.o
 
 .PHONY : src/Robot.o
@@ -861,12 +807,6 @@ help:
 	@echo "... src/FloatPacketType.o"
 	@echo "... src/FloatPacketType.i"
 	@echo "... src/FloatPacketType.s"
-	@echo "... src/HephaestusArm.o"
-	@echo "... src/HephaestusArm.i"
-	@echo "... src/HephaestusArm.s"
-	@echo "... src/ROSWrapper.o"
-	@echo "... src/ROSWrapper.i"
-	@echo "... src/ROSWrapper.s"
 	@echo "... src/Robot.o"
 	@echo "... src/Robot.i"
 	@echo "... src/Robot.s"

@@ -5,6 +5,8 @@ All the important code so far is in the catkin_mqp/src/arm_code/src folder.
 ROSWrapper.cpp is a ROS wrapper that allows the code to interact with the personality node shown_personality.
 The main file with the functions that actually move the arm and include interpolation and inverse kinematics is Robot.cpp, with functions for writing to the hid device using hidapi in SimpleComsDevice.cpp. 
 
+Note: need to reclone the hidapi git repo into arm_code folder
+
 ## ROS and integraton
 - ROSWrapper.cpp contains a ROS node, which publishes to and is subscribed to the shown_personality node from the personality. The subscriber recieves a string message for an emotion, which calls a callback function which calls the method corresponding to the emotion. These methods call servo_jp with the corresponding coordinates for the pose corresponding to the emotion. The input for servo_jp is an array of 3 Complex float values (conversion is done in the code from float to Complex). These represent the respective angle values for each of the servos. 
 
@@ -19,9 +21,10 @@ The main file with the functions that actually move the arm and include interpol
 - To test without the wrapper, uncomment the main function in Robot.cpp and use rosrun arm_code arm_code. May also have to comment out the src/ROSWrapper.cpp line under add_executables in CMakeLists.txt
 
 ### install:
-- don't necessarily need these as using hidraw instead of libusb, but it could help if errors are appearing for no reason
 - sudo apt-get install libusb-dev
 - sudo apt-get install libusb-1.0-0
+- sudo apt-get install libudev-dev
+
 
 ### On hidapi:
 Clone hidapi repository under src/arm_code. Using hidapi hidraw, as apposed to hidapi libusb.

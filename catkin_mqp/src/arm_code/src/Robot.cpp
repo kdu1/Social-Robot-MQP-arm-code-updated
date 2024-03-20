@@ -591,11 +591,10 @@ void Robot::stop(){
 
 
 /**
- * main ROS function
+ * main ROS function for testing
  * Starts ros, calls servo_jp and pickAndPlace to move arm
- * TODO: snap ros stuff
 */
-/*int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     
     ros::init(argc, argv, "arm_code");
@@ -607,7 +606,7 @@ void Robot::stop(){
     const char* path = "/dev/hidraw1";
     SimpleComsDevice s;
     //init robot
-    Robot robot(&nh, &s);
+    Robot robot(&s);
     //Robot robot(&s);
     ROS_INFO("ROS robot is now started...");
 
@@ -627,4 +626,4 @@ void Robot::stop(){
 
     ros::spinOnce();
     ros::waitForShutdown();//cntrl+c to end
-}*/
+}

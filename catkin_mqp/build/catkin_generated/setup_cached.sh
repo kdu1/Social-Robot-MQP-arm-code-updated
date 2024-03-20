@@ -11,5 +11,5 @@ export CMAKE_PREFIX_PATH="/home/vboxuser/Social-Robot-MQP-arm-code-updated/catki
 export LD_LIBRARY_PATH="/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/vboxuser/Social-Robot-MQP-arm-code-updated/catkin_mqp/src:$ROS_PACKAGE_PATH"

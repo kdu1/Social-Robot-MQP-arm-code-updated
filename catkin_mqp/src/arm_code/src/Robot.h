@@ -4,7 +4,7 @@
 #include <vector>
 #include <thread>
 #include <math.h>
-#include <hidapi/hidapi.h>
+#include <hidapi.h>
 //#include <libusb.h>
 //#include <hidapi_libusb.h>
 //#include "hidapi.h"

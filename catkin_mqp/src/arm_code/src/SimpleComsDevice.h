@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <cassert>
-#include <hidapi/hidapi.h>
+#include <hidapi.h>
 //#include <libusb.h>
 #include "libusb-1.0/libusb.h"
 //#include <hidapi/hidapi_libusb.h>
